@@ -29,4 +29,3 @@ contador = 0    #contador soma quantas opções do menu é escolhida obs: usada 
 
 # FIM --> Variáveis do Menu Inicial
 
-
