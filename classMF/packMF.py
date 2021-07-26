@@ -3,11 +3,11 @@
 - Aqui são criadas todas as funções e derivados
 
 @ Teste --------> Somente para testes rápidos
-@ ListaPlayer --> Gera lista de Jogadores cadastrados com id
+@ LP --> Gera lista de Jogadores cadastrados com id
 @ MenuLM -------> Desenho do MENU sem interatividade cadastro, remover, buscar, lista, Jogadores
 @ Escolha ------> Local para interagir com opções do menu, manipulação de variáveis e parte lógica da interface 
 @ MenuCad ------> Escolhas do MenuLM / MENU cadastro, remover, buscar, lista, Jogadores
-@ Menuo --------> Parte grafica do menu sem interatividade, chama automáticamente a função Escolha
+@ Menuo --------> Parte gráfica do menu sem interatividade, chama automáticamente a função Escolha
 
     [extended_summary]
 - Novas funções e derivadas serão criadas aqui!
@@ -25,13 +25,14 @@ def Teste():         # ---> Nada aqui sómente para testes rápidos <---
     print("Local para teste")
 
 
-def ListaPlayer():   # ---> Lista de jogadores com ID por ordem Alfabetica <---
+def LP():   # ---> Lista de jogadores com ID e por ordem Alfabética <---
     global NomePlayer,IdJogador,contador,qt,qt1
     os.system ("cls")
     qt = qt1 = len(NomePlayer)
-    orList = sorted(NomePlayer,key=str.lower) # --> Organiza uma lista em ordem alfabetica <-- obs: chorei sangue aqui @.@
+    orList = sorted(NomePlayer,key=str.lower) # --> Organiza uma lista em ordem alfabética <-- obs: chorei sangue aqui @.@
     for i in range(qt):      
         print("ID:",IdJogador[i]," ",orList[i])
+    return(qt)
 
 
 def MenuLM():        # Desenho MENU Simple ---> Procurar Jogadores <---
@@ -59,11 +60,10 @@ def Escolha():       # Opções de Menu Inicial
     if opcao == "1":
         MenuCad()     
     elif opcao == "2":      # ------------> Continua a opção 2 do menu principal
-        qt = qt1 = len(NomePlayer)
-        print("Quantidade de membros da guild:",qt)     
+        print("Quantidade de membros da guild:",LP())     
         input("Enter P/ Continuar..")
         Menuo()
-    elif opcao == "3": # Unico jeito de parar o programa é escolhendo a opção 3 do menu
+    elif opcao == "3": # Único jeito de parar o programa é escolhendo a opção 3 do menu
         os.system("cls")
         print("Desligando e fechando tudo.")
         sleep(2)
@@ -87,7 +87,7 @@ def MenuCad ():      # ---> MENU CADASTRO JOGADOR <---
     if opcao == "1":    # ---> Buscar Jogador DIGITANDO NOME <---
         digop = input("Buscar Nome:" )
         if digop in NomePlayer: # --> 
-            print("O jogador:",digop,"SIM! é um membro da guild! \o/")
+            print("O jogador:",digop,"SIM! é um membro da guild! lol ")
             input("Enter P/ Continuar..")   
             MenuCad()  
         else:
@@ -96,13 +96,11 @@ def MenuCad ():      # ---> MENU CADASTRO JOGADOR <---
             MenuCad()
     elif opcao == "2":     # ---> Buscar Jogador por ID <---  
         os.system("cls")
-        qt = qt1 = len(NomePlayer)
         orList = sorted(NomePlayer,key=str.lower)
         print("Digite o NUMERO ID do Jogador\n")
         try:    # --> Tente fazer isso até / except
             t1 = int(input())
-        
-            if t1 <= qt:
+            if t1 <= LP():
                 t2 = t1 - 1
                 print("ID:",t1," ",orList[t2])
                 input("Enter para continuar...")
@@ -111,13 +109,13 @@ def MenuCad ():      # ---> MENU CADASTRO JOGADOR <---
                 print("Esse ID esta vazio, ou não existe!")    
                 input("Enter para continuar..")
                 MenuCad()
-                os.system()     # <--
+                os.system("cls")     # <--
         except (TypeError,ValueError):  # ---> Caso try falhe com esses erros faça isso
             print("Coloque NUMERO do ID valido")    
             input("Enter para continuar..")
             MenuCad()   #<----
     elif opcao == "3":  # ---> Mostra Lista de jogadores com ID <---
-        ListaPlayer()
+        LP()
         input("Enter P/ Continuar..")
         os.system("cls")
         MenuCad()
@@ -135,7 +133,7 @@ def MenuCad ():      # ---> MENU CADASTRO JOGADOR <---
         print("*** Insira o nome do jogador a ser add na lista de membros ***")
         print("***                                                        ***")
         print("Jogador",nt," foi adicionado com sucesso!")
-        ListaPlayer()
+        LP()
         input("Aperte Enter para retornar...")
         MenuCad()
     elif opcao == "5":  # ---> REMOVER JOGADOR DA LISTA <---

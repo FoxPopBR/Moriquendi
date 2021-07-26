@@ -3,7 +3,7 @@
 - Local para chamadas de teste do dev.
 - Iniciar aqui uma plataformar automática para teste do Software.
 - Criar um menu agradavel para receber e apresentar os dados dos testes.
-- Notas maiores de Modificação ou adptação do projeto deve ser feritas aqui!
+- Notas maiores de Modificação ou adaptação do projeto deve ser feritas aqui!
 
     [extended_summary]
     *Aguardando Versionamento 1.0.1*
@@ -19,7 +19,10 @@ import sys                      #4
 
 #   Chamada de Funções para teste
 
-Teste()
+while True:
+    Menuo()
+    input ("Tropa de Menu")
+    MenuCad()
 
 
 
@@ -40,7 +43,7 @@ INI --> Todas as funções criadas na pasta --> classMF --> packMF.py
 @ MenuLM -------> --> Menu Cadastro <-- sem interatividade cadastro, remover, buscar, lista, Jogadores
 @ Escolha ------> Local para interagir com opções do Menu Principal ( if ).
 @ MenuCad ------> Escolhas do @MenuLM ( if )/ MENU cadastro, remover, buscar, lista, Jogadores
-@ Menuo --------> --> Menu Principal <-- Parte grafica do menu sem interatividade. Chama automáticamente a função @Escolha <--
+@ Menuo --------> --> Menu Principal <-- Parte gráfica do menu sem interatividade. Chama automáticamente a função @Escolha <--
 FIM <-- Todas as funções criadas em <-- classMF
 
     [Variável Global]
