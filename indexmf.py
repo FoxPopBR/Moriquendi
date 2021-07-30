@@ -5,7 +5,8 @@ import os                       #1
 import sys                      #2 
 from classMF.packMF import *    #3 - Todas as funções puras para o Software / dentro da pasta classMF --> arquivo packMF.py
 from classMF.menuMF import MenuStart         #4 - Todas as variaveis global ficam nesse arquivo separado, localizado na pasta raiz do projeto --> arquivo mfglobal.py
-from classMF import barLoad, menuMF
+from classMF import menuMF
+from classMF.barLoad import *
 import colorama 
 from colorama import *
 ######### IMPORTS END ###########  
