@@ -19,10 +19,14 @@ from mfglobal import *          #2
 import os                       #3
 import sys                      #4
 from time import time,sleep     #5
+from colorama import *          #6
+from termcolor import *         #7
 ######### IMPORTS END ###########
 
 def Teste():         # ---> Nada aqui sómente para testes rápidos <---
     print("Local para teste")
+    
+
 
 
 def LP():   # ---> Lista de jogadores com ID e por ordem Alfabética <---
@@ -35,10 +39,10 @@ def LP():   # ---> Lista de jogadores com ID e por ordem Alfabética <---
     return(qt)
 
 
-def MenuLM():        # Desenho MENU Simple ---> Procurar Jogadores <---
+def MenuLM():       # Desenho MENU Simple ---> Procurar Jogadores <---
     os.system("cls") #chama comando do sistema operacional, no caso o comando "cls"
     print("Iniciando treinamento Python\nProjeto controle Moriquendi Federation")
-    print("===================================================================")
+    print(Fore.GREEN+"===================================================================")
     print("==                                                               ==")
     print("==                    Moriquendi Federation                      ==")
     print("==                                                               ==")

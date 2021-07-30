@@ -1,15 +1,21 @@
 #-*- coding: -utf8 -*-
 ########## IMPORTS INI ##########       By. ( FoxPop / FabioCesar )
+from classMF import barLoad, menuMF
 import os                       #1 
 import sys                      #2 
 from classMF.packMF import *    #3 - Todas as funções puras para o Software / dentro da pasta classMF --> arquivo packMF.py
-#from mfglobal import *         #4 - Todas as variaveis global ficam nesse arquivo separado, localizado na pasta raiz do projeto --> arquivo mfglobal.py
+from classMF.menuMF import MenuStart         #4 - Todas as variaveis global ficam nesse arquivo separado, localizado na pasta raiz do projeto --> arquivo mfglobal.py
+from classMF import menuMF
+from classMF.barLoad import *
+import colorama 
+from colorama import *
 ######### IMPORTS END ###########  
+colorama.init(autoreset=True)
 
-while True:
+while 1:
     os.system("cls")
-    Menuo()  # ------> @Menuo Inicia o programa Menu Principal
- 
+    MenuStart()  # ------> #Chama Logo Moriquendi e Castelo Desenhado
+    exit()
 
 
 
@@ -24,7 +30,7 @@ INI --> Todas as funções criadas na pasta --> classMF --> packMF.py
 @ MenuLM -------> --> Menu Cadastro <-- sem interatividade cadastro, remover, buscar, lista, Jogadores
 @ Escolha ------> Local para interagir com opções do Menu Principal ( if ).
 @ MenuCad ------> Escolhas do @MenuLM ( if )/ MENU cadastro, remover, buscar, lista, Jogadores
-@ Menuo --------> --> Menu Principal <-- Parte grafica do menu sem interatividade. Chama automáticamente a função @Escolha <--
+@ Menuo --------> --> Menu Principal <-- Parte gráfica do menu sem interatividade. Chama automáticamente a função @Escolha <--
 FIM <-- Todas as funções criadas em <-- classMF
 
     [Variável Global]
