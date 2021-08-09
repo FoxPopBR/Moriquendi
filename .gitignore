@@ -6,3 +6,6 @@
 *.vscode
 *.ico
 *.exe
+.gitignore
+.vscode
+workspace.Moriquendi.code-workspace
