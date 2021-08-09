@@ -2,8 +2,8 @@ import os
 import colorama
 from colorama import *
 import termcolor
-from termcolor import *
-from ColorsT import *
+#from termcolor import *
+
 colorama.init(autoreset=True)
 
 print('\033[31m' + 'some red text')

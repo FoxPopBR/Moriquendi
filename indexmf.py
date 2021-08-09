@@ -1,18 +1,22 @@
 #-*- coding: -utf8 -*-
-########## IMPORTS INI ##########       By. ( FoxPop / FabioCesar )
-from classMF import barLoad, menuMF
-import os                       #1 
-import sys                      #2 
-from classMF.packMF import *    #3 - Todas as funções puras para o Software / dentro da pasta classMF --> arquivo packMF.py
-from classMF.menuMF import MenuStart         #4 - Todas as variaveis global ficam nesse arquivo separado, localizado na pasta raiz do projeto --> arquivo mfglobal.py
-from classMF import menuMF
+########## IMPORTS INI ##########       By. ( FoxPop / FábioCesar )
+#import classMF
+from classMF.menuMF import MenuStart
+#from classMF.packMF import *
 from classMF.barLoad import *
-import colorama 
-from colorama import *
+from classMF.callMF import *
+#from classMF.packMF import *
+#from classMF import barLoad,packMF,menuMF,callMF
+import os                       #1 
+import sys
+from colorama import init, Fore, Style
+init()
+#import classMF.packMF MenuStart
 ######### IMPORTS END ###########  
-colorama.init(autoreset=True)
+#colorama.init(autoreset=True)
 
 while 1:
+    init()
     os.system("cls")
     MenuStart()  # ------> #Chama Logo Moriquendi e Castelo Desenhado
     exit()
@@ -43,5 +47,5 @@ INI --> Variáveis Global -->
 - IdJogador   --> Numeros de 1 a 100 / Referência ID para jogadores cadastrados
 FIM <-- Variáveis Global <--
 
-By. ( FoxPop / FabioCesar )
+By. ( FoxPop / FábioCesar )
 """

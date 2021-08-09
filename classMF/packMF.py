@@ -20,7 +20,8 @@ import os                       #3
 import sys                      #4
 from time import time,sleep     #5
 from colorama import *          #6
-from termcolor import *         #7
+#from termcolor import *         #7
+from barLoad import BarM1
 ######### IMPORTS END ###########
 
 def Teste():         # ---> Nada aqui sómente para testes rápidos <---
